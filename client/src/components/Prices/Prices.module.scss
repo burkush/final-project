@@ -1,0 +1,29 @@
+@import '../../assets/sass/abstracts/colors';
+@import '../../assets/sass/abstracts/mixins';
+
+.prices {
+  @include flex-align-center;
+  gap: 7px;
+
+  &__price,
+  &__discount {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__price {
+    color: $dark-blue;
+
+    &_irrelevant {
+      font-size: 15px;
+      font-weight: 600;
+      color: #b8b8b8;
+      text-decoration: line-through;
+    }
+  }
+
+  &__discount {
+    color: $dark-blue;
+  }
+}

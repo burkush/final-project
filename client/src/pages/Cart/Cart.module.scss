@@ -1,0 +1,24 @@
+@import '../../assets/sass/abstracts/colors';
+@import '../../assets/sass/abstracts/mixins';
+
+.cart {
+  &__banner {
+    min-height: 450px;
+    margin-bottom: 140px;
+    background: url('../../assets/img/decor/cart-banner-bg.png') no-repeat
+        center,
+      url('../../assets/img/decor/cart-banner-img.png') no-repeat center;
+
+    &-container {
+      @include container;
+      @include flex-center;
+      min-height: inherit;
+    }
+  }
+
+  &__title {
+    @include title;
+    font-size: 4.375rem;
+    color: $dark-blue;
+  }
+}

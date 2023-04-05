@@ -1,0 +1,40 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &__loader,
+  &__error {
+    grid-column: 1 / span 4;
+    text-align: center;
+  }
+
+  &__error {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(212, 55, 55);
+  }
+
+  button {
+    align-self: center;
+  }
+
+  @media (max-width: 1400px) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.product {
+  position: relative;
+  width: 335px;
+  height: 483px;
+  border-radius: 30px;
+  background-color: #f9f8f8;
+  cursor: pointer;
+  transition: box-shadow 250ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+  }
+
+  &:hover &__image {
+    scale: 1.05;
+  }
+
+  &__container {
+    padding: 1.5rem 1.875rem;
+  }
+
+  &__type {
+    @include item-type;
+  }
+
+  &__image {
+    height: 350px;
+    margin-bottom: 10px;
+    width: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: scale 300ms ease;
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 1.125rem;
+    font-size: 20px;
+    color: $dark-blue;
+  }
+
+  &__hr {
+    margin-bottom: 10px;
+    border: 1px solid #dedddd;
+  }
+
+  &__info {
+    @include flex-between-center;
+  }
+
+  @media (max-width: 576px) {
+    & {
+      width: unset;
+      min-width: 100%;
+    }
+  }
+}

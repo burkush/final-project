@@ -1,0 +1,56 @@
+@import '../../assets/sass/abstracts/colors';
+@import '../../assets/sass/abstracts/mixins';
+
+.notfound {
+  min-height: 100vh;
+  background: url('../../assets/img/decor/not-found.png') no-repeat center;
+
+  &__container {
+    @include container;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__title,
+  &__subtitle,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    @include title;
+    font-size: 270px;
+    color: #8fa8a8;
+  }
+
+  &__subtitle {
+    @include title;
+    margin-bottom: 30px;
+    font-size: 70px;
+    color: $dark-blue;
+  }
+
+  &__text {
+    @include paragraph;
+    margin-bottom: 30px;
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      padding-top: 30px;
+      align-items: center;
+    }
+
+    &__content {
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 120px;
+    }
+  }
+}

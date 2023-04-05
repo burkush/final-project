@@ -1,0 +1,91 @@
+@import '../../assets/sass/abstracts/colors';
+@import '../../assets/sass/abstracts/mixins';
+
+.footer {
+  margin-top: auto;
+
+  &__container {
+    @include container;
+    max-width: 1150px;
+  }
+
+  &__content {
+    padding: 100px 0;
+    display: flex;
+
+    & > * {
+      padding: 0 20px;
+
+      &:not(:last-child) {
+        border-right: 1px solid #d4d4d4;
+      }
+    }
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 1.875rem;
+    font-size: 1.875rem;
+    color: $dark-blue;
+  }
+
+  &__contact {
+    text-align: right;
+  }
+
+  &__contactItem {
+    margin-bottom: 1.5rem;
+  }
+
+  &__subtitle {
+    @include title;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: $dark-blue;
+  }
+
+  &__text {
+    @include paragraph;
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    & .footer__text {
+      margin: 20px 0;
+      max-width: 500px;
+    }
+  }
+
+  &__links {
+    @include flex-align-center;
+    gap: 2rem;
+
+    & > * {
+      background-color: #efefef;
+      padding: 1rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__utilitiesList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    a {
+      @include paragraph;
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid #d4d4d4;
+    padding: 1rem 0;
+    text-align: center;
+    @include paragraph;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../assets/sass/abstracts/mixins';
+
+.rating {
+  @include flex-align-center;
+  gap: 2px;
+
+  svg {
+    font-size: 16px;
+    color: #ffa858;
+  }
+}

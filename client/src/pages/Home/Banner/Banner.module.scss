@@ -1,0 +1,47 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.banner {
+  min-height: 900px;
+  background: url('../../../assets/img/decor/home-banner-bg.png') no-repeat
+      center,
+    url('../../../assets/img/decor/home-banner-img.png') no-repeat center;
+
+  &__container {
+    @include container;
+    padding-top: 250px;
+  }
+
+  &__title,
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include title;
+    max-width: 520px;
+    line-height: 5.125rem;
+    font-size: 4.375rem;
+    color: $dark-blue;
+  }
+
+  &__subtitle {
+    @include cursive-text;
+  }
+
+  @media (max-width: 992px) {
+    & {
+      background: none;
+      min-height: unset;
+    }
+
+    &__container {
+      padding-top: 30px;
+      text-align: center;
+    }
+
+    &__title {
+      max-width: unset;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../assets/sass/abstracts/colors';
+@import '../../assets/sass/abstracts/mixins';
+
+.thanks {
+  &__title {
+    @include title;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 4rem;
+    color: $dark-blue;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.list {
+  background-color: #fdb02d29;
+  padding: 150px 0 60px;
+
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__total-table {
+    td,
+    th {
+      @include title;
+      font-size: 2rem;
+      color: $dark-blue;
+      padding: 1.5rem 1rem;
+    }
+
+    td {
+      text-align: right;
+    }
+
+    th {
+      text-align: left;
+    }
+  }
+
+  &__absent {
+    @include title;
+    font-size: 2rem;
+    text-align: center;
+    color: $dark-blue;
+  }
+}
+
+.form {
+  &__open {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .list {
+    &__container {
+      gap: 4rem;
+    }
+  }
+}

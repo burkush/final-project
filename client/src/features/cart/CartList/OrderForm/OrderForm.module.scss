@@ -1,0 +1,81 @@
+@import '../../../../assets/sass/abstracts/colors';
+@import '../../../../assets/sass/abstracts/mixins';
+
+.form {
+  &__container {
+    @include container;
+    max-width: 1185px;
+  }
+
+  &__fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+
+  &__label {
+    @include title;
+    font-size: 1.125rem;
+    color: $dark-blue;
+  }
+
+  &__input,
+  &__textarea {
+    outline: none;
+    padding: 1.875rem 1.25rem;
+    border: 1px solid #7eb693;
+    border-radius: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.125rem;
+    color: #ababab;
+
+    &:focus {
+      border-color: $dark-blue;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 230px;
+  }
+
+  &__submit {
+    margin-top: 3rem;
+    text-align: center;
+
+    button {
+      padding: 1.2rem 2.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      background-color: $dark-blue;
+      color: #fff;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        background-color: rgb(47, 47, 103);
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__fieldset {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__textarea {
+      min-height: 100px;
+    }
+  }
+}

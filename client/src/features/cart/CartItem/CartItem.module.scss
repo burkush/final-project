@@ -1,0 +1,90 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.item {
+  @include flex-between-center;
+
+  &__info {
+    @include flex-align-center;
+    gap: 2rem;
+  }
+
+  &__image {
+    @include flex-center;
+    width: 250px;
+    height: 230px;
+    border-radius: 30px;
+    background-color: #f7ecd5;
+
+    img {
+      max-height: 230px;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__title {
+    @include title;
+    font-size: 1.875rem;
+    color: $dark-blue;
+  }
+}
+
+.form {
+  @include flex-align-center;
+  gap: 1.25rem;
+
+  &__delete {
+    width: 54px;
+    height: 36px;
+    border: none;
+    border-radius: 12px;
+    margin-left: 2rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+
+    background-color: $dark-blue;
+    color: #fff;
+  }
+
+  &__label {
+    @include title;
+    font-size: 1.25rem;
+    color: $dark-blue;
+  }
+
+  &__input {
+    align-self: stretch;
+    max-width: 100px;
+    padding: 1rem;
+    text-align: center;
+
+    border: 2px solid $dark-blue;
+    border-radius: 1rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+
+    &:focus {
+      outline-color: $pale-green;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .item {
+    &__info {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

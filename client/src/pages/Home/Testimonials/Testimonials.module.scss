@@ -1,0 +1,55 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.testimonials {
+  background: url('../../../assets/img/decor/testimonials-bg.png') no-repeat
+    center;
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    text-align: center;
+    padding: 3rem;
+  }
+
+  &__title {
+    @include cursive-text;
+    margin-bottom: 1.25rem;
+  }
+
+  &__subtitle {
+    @include title;
+    margin-bottom: 80px;
+    font-size: 3rem;
+    color: $dark-blue;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+  }
+
+  &__text {
+    @include paragraph;
+    max-width: 800px;
+  }
+
+  &__name {
+    @include title;
+    font-size: 1.5rem;
+    color: $dark-blue;
+  }
+
+  &__role {
+    @include paragraph;
+    font-size: 1rem;
+  }
+}

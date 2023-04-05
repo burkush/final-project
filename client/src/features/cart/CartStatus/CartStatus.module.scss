@@ -1,0 +1,32 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.cart {
+  width: 160px;
+  padding: 4px 3px;
+  outline: 2px solid $light-grey;
+  border-radius: 2.25rem;
+
+  @include flex-align-center;
+  gap: 1rem;
+
+  &__icon {
+    @include flex-center;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: $dark-blue;
+  }
+
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: $dark-blue;
+  }
+
+  &__quantity {
+    &_added {
+      color: #ff0000;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../assets/sass/abstracts/colors';
+@import '../../assets/sass/abstracts/mixins';
+
+.link {
+  display: inline-block;
+  padding: 1.8rem 2.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: all 200ms ease-in-out;
+
+  &_blue {
+    background-color: $dark-blue;
+    color: #fff;
+
+    &:hover {
+      background-color: rgb(47, 47, 103);
+    }
+  }
+
+  &_yellow {
+    background-color: $yellow;
+    color: $dark-blue;
+
+    &:hover {
+      background-color: rgb(255, 220, 60);
+    }
+  }
+
+  &__container {
+    @include flex-align-center;
+    gap: 10px;
+  }
+
+  &__icon {
+    @include flex-center;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: $dark-blue;
+    transition: translate 200ms ease-in-out;
+  }
+
+  &:hover &__icon {
+    translate: 10%;
+  }
+}

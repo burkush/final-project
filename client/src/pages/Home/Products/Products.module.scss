@@ -1,0 +1,31 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.products {
+  padding: 187px 0;
+
+  &__container {
+    @include container;
+  }
+
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 50px;
+    font-size: 3.125rem;
+    color: $dark-blue;
+  }
+
+  &__subtitle {
+    @include cursive-text;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 90px 0;
+  }
+}

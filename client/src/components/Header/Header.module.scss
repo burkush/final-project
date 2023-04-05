@@ -1,0 +1,140 @@
+@import '../../assets/sass/abstracts/colors';
+@import '../../assets/sass/abstracts/mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  padding: 60px 0;
+
+  background-color: #fff;
+  transition: padding 350ms ease-in-out;
+
+  &_scrolled {
+    padding: 20px 0;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  &__container {
+    @include container;
+    max-width: 1600px;
+
+    @include flex-align-center;
+    gap: 0.5rem;
+  }
+
+  &__mobileVisible {
+    @include flex-align-center;
+    gap: 2rem;
+  }
+
+  &__hamburger {
+    display: none;
+    font-size: 3rem;
+
+    svg {
+      color: $dark-blue;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    &__container {
+      justify-content: space-between;
+    }
+
+    &__hamburger {
+      display: block;
+    }
+  }
+
+  @media (max-width: 576px) {
+    & {
+      padding: 20px 0;
+    }
+  }
+}
+
+// Navigation links
+
+.nav {
+  flex-grow: 1;
+
+  margin-left: 60px;
+
+  @include flex-align-center;
+  gap: 0 60px;
+
+  &__list {
+    @include flex-align-center;
+    gap: 0 45px;
+  }
+
+  &__link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $dark-blue;
+    transition: color 200ms ease-in;
+
+    &:hover {
+      color: $pale-green;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    & {
+      margin-left: 0;
+      padding: 2rem 0;
+
+      flex-direction: column;
+      justify-content: space-between;
+
+      position: fixed;
+      top: 185px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 999;
+
+      translate: 100%;
+
+      background-color: $yellow;
+      transition: translate 500ms ease;
+
+      &_active {
+        translate: 0%;
+      }
+    }
+
+    &__list {
+      padding-left: 0;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    & {
+      top: 102px;
+    }
+  }
+
+  @media (max-height: 600px) and (orientation: portrait) {
+    &__list {
+      gap: 1.4rem;
+    }
+  }
+
+  @media (max-width: 992px) and (orientation: landscape) {
+    & {
+      top: 102px;
+    }
+
+    &__list {
+      flex-direction: row;
+    }
+  }
+}

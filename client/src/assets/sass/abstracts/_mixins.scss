@@ -1,0 +1,76 @@
+@mixin container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  // color: $dark-blue;
+}
+
+@mixin paragraph {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: $dark-grey;
+}
+
+@mixin btn-link {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 28px 38px;
+  border-radius: 1rem;
+  background-color: $dark-blue;
+}
+
+@mixin cursive-text {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 400;
+  font-size: 2.25rem;
+  color: #68a47f;
+}
+
+@mixin item-type {
+  position: absolute;
+  top: 1.875rem;
+  left: 1.875rem;
+  z-index: 1;
+
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 8px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+
+  background-color: $dark-blue;
+  color: #fff;
+}

@@ -1,0 +1,18 @@
+@import '../../assets/sass/abstracts/colors';
+@import '../../assets/sass/abstracts/mixins';
+
+.logo {
+  @include flex-align-center;
+  gap: 1rem;
+  color: $dark-blue;
+
+  &__image {
+    width: 2.375rem;
+  }
+
+  &__title {
+    @include title;
+    font-weight: 700;
+    font-size: 2.375rem;
+  }
+}

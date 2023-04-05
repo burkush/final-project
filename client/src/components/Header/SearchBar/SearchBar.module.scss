@@ -1,0 +1,50 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.search {
+  width: 376px;
+  padding: 0 5px;
+  border: none;
+  border-radius: 2.25rem;
+
+  @include flex-between-center;
+
+  background-color: #fafafa;
+
+  &:has(input:focus) {
+    outline: 2px solid $pale-green;
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding: 20px;
+    outline: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    background-color: transparent;
+  }
+
+  &__icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    @include flex-center;
+
+    background-color: $pale-green;
+  }
+
+  @media (max-width: 620px) {
+    & {
+      width: unset;
+    }
+  }
+
+  @media (max-width: 335px) {
+    &__icon {
+      display: none;
+    }
+  }
+}

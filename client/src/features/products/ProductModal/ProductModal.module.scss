@@ -1,0 +1,195 @@
+@import '../../../assets/sass/abstracts/colors';
+@import '../../../assets/sass/abstracts/mixins';
+
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  z-index: 1000;
+  @include flex-center;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    max-height: 1110px;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 115px 0;
+  }
+
+  &__container {
+    @include container;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1002;
+    width: 54px;
+    height: 36px;
+    border: none;
+    border-radius: 12px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+
+    background-color: $dark-blue;
+    color: #fff;
+  }
+}
+
+.product-info {
+  @include flex-align-center;
+  gap: 5rem;
+
+  &__main-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__image {
+    position: relative;
+    width: 445px;
+    height: 445px;
+    border-radius: 1.875rem;
+    @include flex-center;
+    background-color: #eff6f1;
+
+    img {
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__type {
+    @include item-type;
+  }
+
+  &__title {
+    @include title;
+    font-size: 32px;
+    color: $dark-blue;
+  }
+
+  &__short-description {
+    @include paragraph;
+    font-size: 16px;
+    margin-top: 1rem;
+  }
+}
+
+.add-form {
+  @include flex-align-center;
+  gap: 1.25rem;
+
+  &__label {
+    @include title;
+    font-size: 24px;
+    color: $dark-blue;
+  }
+
+  &__input {
+    align-self: stretch;
+    max-width: 150px;
+    padding: 1rem;
+    text-align: center;
+
+    border: 2px solid $dark-blue;
+    border-radius: 1rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+
+    &:focus {
+      outline-color: $pale-green;
+    }
+  }
+}
+
+.product-additional {
+  margin-top: 80px;
+
+  &__tabs {
+    margin-bottom: 35px;
+    @include flex-center;
+    gap: 1.875rem;
+  }
+
+  &__tab {
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem 3rem;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    background-color: #eff6f1;
+    color: $dark-blue;
+
+    &_active {
+      background-color: $dark-blue;
+      color: #fff;
+    }
+  }
+
+  &__content {
+    @include paragraph;
+    font-size: 16px;
+    max-width: 1120px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-info {
+    flex-direction: column;
+
+    &__main-data {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    &__content {
+      padding: 3rem 0;
+    }
+
+    &__close {
+      right: 1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .product-info {
+    &__image {
+      width: unset;
+      height: unset;
+      min-width: 100%;
+    }
+  }
+
+  .add-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 370px) {
+  .product-additional {
+    &__tabs {
+      flex-direction: column;
+    }
+
+    &__tab {
+      width: 100%;
+    }
+  }
+}

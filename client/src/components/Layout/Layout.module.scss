@@ -1,0 +1,15 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    margin-top: 185px;
+  }
+
+  @media (max-width: 576px) {
+    &__content {
+      margin-top: 105px;
+    }
+  }
+}
